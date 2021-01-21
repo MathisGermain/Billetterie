@@ -1,10 +1,12 @@
 package infrastructure.Controller;
 
 import domain.models.InvalidAnswerException;
-import domain.models.TicketNotFoundException;
+import domain.models.Ticket;
 import domain.models.UserNotFoundException;
 import use_case.Client.SendConfirmTicket;
 import use_case.Client.UpdateTicketAnswer;
+
+import java.util.List;
 
 public class TicketController {
 
@@ -17,13 +19,11 @@ public class TicketController {
         this.sendConfirmTicket = sendConfirmTicket;
     }
 
-    public void updateTicketChoice(String answer,int ticketId){
+    public void updateTicketChoice(List<Ticket> tickets){
         try{
-            updateTicketAnswer.update(answer,ticketId);
-            sendConfirmTicket.sendEmail(ticketId);
+            updateTicketAnswer.update(tickets);
+            sendConfirmTicket.sendEmail(tickets.get(0).getUser_id());
         }catch(InvalidAnswerException e){
-            //LOGGER.LOG(e)
-        }catch (TicketNotFoundException e){
             //LOGGER.LOG(e)
         }catch(UserNotFoundException e){
             //LOGGER.LOG(e)

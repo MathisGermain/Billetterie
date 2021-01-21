@@ -3,7 +3,8 @@ package use_case.Client;
 import domain.TicketRepository;
 import domain.models.InvalidAnswerException;
 import domain.models.Ticket;
-import domain.models.TicketNotFoundException;
+
+import java.util.List;
 
 public class UpdateTicketAnswer {
 
@@ -13,9 +14,9 @@ public class UpdateTicketAnswer {
         this.ticketRepository = ticketRepository;
     }
 
-    public void update(String answer, int ticketId) throws InvalidAnswerException, TicketNotFoundException {
-        if(answer.equals("KEEP") || answer.equals("REIMBURSE")){
-            this.ticketRepository.updateTicket(ticketId,answer);
+    public void update(List<Ticket> tickets) throws InvalidAnswerException {
+        for(Ticket ticket : tickets){
+            this.ticketRepository.updateTicket(ticket.getId(),ticket.getAnswer());
         }
     }
 
