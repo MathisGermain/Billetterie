@@ -13,9 +13,9 @@ public class InMemoryUser implements UserRepository {
 
 
     public User getUserById(int userId) throws UserNotFoundException{
-        for(int x = 0 ; x < this.users.size() ; x++){
-            if(this.users.get(x).getId() == userId){
-                return this.users.get(x);
+        for(User user : users){
+            if(user.getId() == userId){
+                return user;
             }
         }
         throw new UserNotFoundException();

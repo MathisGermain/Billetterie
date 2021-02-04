@@ -18,8 +18,8 @@ public class DeleteUserChoice {
         final List<Ticket> tickets = ticketRepository.getAllChosenTickets();
 
         // A remplacer
-        for(int x = 0 ; x < tickets.size() ; x++){
-            ticketRepository.updateTicket(tickets.get(x).getId(),"undefined");
+        for(Ticket ticket : tickets){
+            ticketRepository.updateTicket(ticket.getId(),"undefined");
         }
     }
 

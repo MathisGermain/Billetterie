@@ -22,9 +22,9 @@ public class InMemoryTicket implements TicketRepository {
 
     public List<Ticket> getTickets(User user) {
         List<Ticket> userTickets = null;
-        for(int x = 0 ; x < this.tickets.size() ; x++){
-            if(user.getId() == this.tickets.get(x).getUser_id()){
-                userTickets.add(this.tickets.get(x));
+        for(Ticket ticket : tickets){
+            if(user.getId() == ticket.getUser_id()){
+                userTickets.add(ticket);
             }
         }
         return userTickets;
@@ -32,27 +32,27 @@ public class InMemoryTicket implements TicketRepository {
 
     public List<Ticket> getAllChosenTickets() {
         List<Ticket> chosenTickets = null;
-        for(int x = 0 ; x < this.tickets.size() ; x++){
-            if(!this.tickets.get(x).getAnswer().equals("UNDEFINED")){
-                chosenTickets.add(this.tickets.get(x));
+        for(Ticket ticket : tickets){
+            if(!ticket.getAnswer().equals("UNDEFINED")){
+                chosenTickets.add(ticket);
             }
         }
         return chosenTickets;
     }
 
     public Ticket getTicketById(int ticketId) throws TicketNotFoundException {
-        for(int x = 0 ; x < this.tickets.size() ; x++){
-            if(this.tickets.get(x).getId() == ticketId){
-                return this.tickets.get(x);
+        for(Ticket ticket : tickets){
+            if(ticket.getId() == ticketId){
+                return ticket;
             }
         }
         throw new TicketNotFoundException();
     }
 
     public void updateTicket(int ticketId, String answer) throws InvalidAnswerException {
-        for(int x = 0 ; x < this.tickets.size() ; x++){
-            if(this.tickets.get(x).getId() == ticketId){
-                this.tickets.get(x).update(answer);
+        for(Ticket ticket : tickets){
+            if(ticket.getId() == ticketId){
+                ticket.update(answer);
             }
         }
     }
