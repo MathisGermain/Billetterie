@@ -1,13 +1,14 @@
 package infrastructure.DAO;
 
+
 import domain.UserRepository;
 import domain.models.User;
 import domain.models.UserNotFoundException;
 
-import java.util.HashMap;
+
 import java.util.List;
 
-public class InMemoryUser implements UserRepository {
+public class InMemoryUser implements UserRepository{
 
     private List<User> users = null;
 
@@ -20,4 +21,6 @@ public class InMemoryUser implements UserRepository {
         }
         throw new UserNotFoundException();
     }
+
+
 }

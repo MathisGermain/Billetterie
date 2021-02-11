@@ -14,12 +14,11 @@ public class DeleteUserChoice {
         this.ticketRepository = ticketRepository;
     }
 
-    public void deleteAllChoices() throws InvalidAnswerException {
+    public void execute() throws InvalidAnswerException {
         final List<Ticket> tickets = ticketRepository.getAllChosenTickets();
 
-        // A remplacer
         for(Ticket ticket : tickets){
-            ticketRepository.updateTicket(ticket.getId(),"undefined");
+            ticketRepository.updateTicket(ticket.getId(),"UNDEFINED");
         }
     }
 

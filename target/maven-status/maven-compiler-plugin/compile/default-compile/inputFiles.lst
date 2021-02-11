@@ -1,0 +1,17 @@
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\use_case\Service_client\GetUserChoice.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\use_case\Client\SendConfirmTicket.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\use_case\Service_client\DeleteUserChoice.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\domain\models\UserNotFoundException.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\infrastructure\DAO\InMemoryTicket.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\use_case\Client\UpdateTicketAnswer.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\domain\UserRepository.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\infrastructure\Controller\UserController.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\domain\TicketRepository.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\domain\models\Ticket.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\domain\models\User.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\infrastructure\DAO\InMemoryUser.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\utils\JsonParser.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\domain\models\InvalidAnswerException.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\domain\models\TicketNotFoundException.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\infrastructure\Controller\TicketController.java
+C:\Users\mathi\Desktop\Porjet 0402\Billetterie\src\main\java\use_case\Initialise\SetTicketsList.java

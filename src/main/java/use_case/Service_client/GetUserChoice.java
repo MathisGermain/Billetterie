@@ -19,7 +19,7 @@ public class GetUserChoice {
 
     }*/
 
-    public List<Ticket> getAllChoices(){
+    public List<Ticket> execute(){
         return this.ticketRepository.getAllChosenTickets();
     }
 }

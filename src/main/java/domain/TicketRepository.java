@@ -17,6 +17,8 @@ public interface TicketRepository {
 
     void updateTicket(int ticketId,String answer) throws InvalidAnswerException;
 
+    void setTickets(List<Ticket> ticketList);
+
 
 
 }

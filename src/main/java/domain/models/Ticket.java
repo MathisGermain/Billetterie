@@ -14,6 +14,15 @@ public class Ticket {
         this.price = price;
         this.user_id = user_id;
         this.time = time;
+        this.answer = "UNDEFINED";
+    }
+
+    public Ticket(int id, int price, int user_id,String time,String answer) {
+        this.id = id;
+        this.price = price;
+        this.user_id = user_id;
+        this.time = time;
+        this.answer = answer;
     }
 
     public int getId() {

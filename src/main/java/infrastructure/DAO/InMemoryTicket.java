@@ -12,13 +12,7 @@ import java.util.List;
 
 public class InMemoryTicket implements TicketRepository {
 
-
     private List<Ticket> tickets = null;
-
-        //ObjectMapper objectMapper = new ObjectMapper();
-        //this.tickets = objectMapper.readValue(json, new TypeReference<HashMap<String, String>>(){});
-
-
 
     public List<Ticket> getTickets(User user) {
         List<Ticket> userTickets = null;
@@ -55,6 +49,10 @@ public class InMemoryTicket implements TicketRepository {
                 ticket.update(answer);
             }
         }
+    }
+
+    public void setTickets(List<Ticket> ticketList){
+        tickets = ticketList;
     }
 
 

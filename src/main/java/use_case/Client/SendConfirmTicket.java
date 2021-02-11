@@ -12,13 +12,7 @@ public class SendConfirmTicket {
         this.userRepository = userRepository;
     }
 
-    public void sendEmail(int userId) throws UserNotFoundException {
-        User user = this.userRepository.getUserById(userId);
-        String email = user.getEmail();
 
-        //PRINT / ENVOIE DU MAIL
-
-    }
 
 
 }
